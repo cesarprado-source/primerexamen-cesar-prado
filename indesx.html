@@ -5,9 +5,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MANACO | Tienda Oficial</title>
+  <style>
+    
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #000;
+      color: #fff;
+      padding: 8px;
+      z-index: 100;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+
+    :focus {
+      outline: 3px solid #f90;
+      outline-offset: 2px;
+    }
+
+    
+    .producto-imagen {
+      width: 200px;
+      height: 150px;
+      background-color: #ddd;
+      margin-bottom: 8px;
+      border-radius: 8px;
+    }
+  </style>
 </head>
 
 <body>
+  
+  <a href="#contenido" class="skip-link">Saltar al contenido principal</a>
+
   <header>
     <div>
       <a href="#" aria-label="Inicio - MANACO">
@@ -16,16 +49,16 @@
     </div>
     <nav aria-label="Navegación principal">
       <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Servicios</a></li>
-        <li><a href="#">Contacto</a></li>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-  
-    <section>
+  <main id="contenido">
+    
+    <section id="inicio">
       <header>
         <h2>Calzado que impulsa tu paso</h2>
       </header>
@@ -33,27 +66,30 @@
     </section>
 
     
-    <section>
+    <section id="productos">
       <header>
         <h2>Catálogo de Productos</h2>
       </header>
       <div>
         <article>
+          <div class="producto-imagen" aria-label="Zapatilla Running color azul con suela blanca"></div>
           <h3>Zapatilla Running</h3>
           <p>Precio: $00.00</p>
-          <button>Añadir al carrito</button>
+          <button type="button">Añadir al carrito</button>
         </article>
 
         <article>
+          <div class="producto-imagen" aria-label="Botín de cuero marrón con cordones"></div>
           <h3>Botín de Cuero</h3>
           <p>Precio: $00.00</p>
-          <button>Añadir al carrito</button>
+          <button type="button">Añadir al carrito</button>
         </article>
 
         <article>
+          <div class="producto-imagen" aria-label="Sandalia casual negra con tiras ajustables"></div>
           <h3>Sandalia Casual</h3>
           <p>Precio: $00.00</p>
-          <button>Añadir al carrito</button>
+          <button type="button">Añadir al carrito</button>
         </article>
       </div>
     </section>
@@ -70,4 +106,6 @@
 </body>
 
 </html>
+
+
 
